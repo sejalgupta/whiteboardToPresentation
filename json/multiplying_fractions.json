@@ -1,87 +1,120 @@
-[
-    {
-        "title": ["Multiplying Fractions"],
-        "subtitle": ["6th Grade Math Lesson"],
-        "layout": "TITLE_SLIDE"
-    },
-    {
-        "title": ["Introduction"],
-        "content": [
-            {
-                "type": "text",
-                "text": "Overview of today's lesson and learning objectives."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["What are Fractions?"],
-        "content": [
-            {
-                "type": "text",
-                "text": "A brief recap of fractions and their components: numerator and denominator."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Basics of Multiplying Fractions"],
-        "content": [
-            {
-                "type": "text",
-                "text": "Explanation of how to multiply fractions: Multiply the numerators and multiply the denominators."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Example 1"],
-        "content": [
-            {
-                "type": "text",
-                "text": "Step-by-step example of a simple fraction multiplication."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Example 2"],
-        "content": [
-            {
-                "type": "text",
-                "text": "A slightly more complex example involving larger numbers or mixed numbers."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Practice Problem"],
-        "content": [
-            {
-                "type": "text",
-                "text": "An interactive practice problem for students to solve."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Review and Q&A"],
-        "content": [
-            {
-                "type": "text",
-                "text": "Recap of key points and open floor for questions."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    },
-    {
-        "title": ["Conclusion"],
-        "content": [
-            {
-                "type": "text",
-                "text": "Wrap up and preview of the next lesson."
-            }
-        ],
-        "layout": "TITLE_AND_CONTENT_SLIDE"
-    }
-]
+{
+    "slides": [
+        {
+            "layout": "TITLE_SLIDE",
+            "title": [
+                "Multiplying Fractions",
+                "Understanding the Basics"
+            ],
+            "subtitle": []
+        },
+        {
+            "layout": "SECTION_HEADER",
+            "title": [
+                "What is Fraction Multiplication?"
+            ],
+            "subtitle": [
+                "A Mathematical Operation Applied to Fractions"
+            ]
+        },
+        {
+            "layout": "TITLE_AND_CONTENT_SLIDE",
+            "title": [
+                "Key Concept"
+            ],
+            "content": [
+                {
+                    "type": "text",
+                    "text": "When we multiply fractions, we are finding a part of a part."
+                }
+            ]
+        },
+        {
+            "layout": "COMPARISON",
+            "title": [
+                "Multiplication vs. Addition"
+            ],
+            "subtitle": [
+                "Multiplying Fractions",
+                "Adding Fractions"
+            ],
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Multiply the numerators and the denominators."
+                },
+                {
+                    "type": "text",
+                    "text": "Find a common denominator before adding numerators."
+                }
+            ]
+        },
+        {
+            "layout": "TWO_CONTENT",
+            "title": [
+                "Steps to Multiply Fractions"
+            ],
+            "content": [
+                {
+                    "type": "text",
+                    "text": "1. Multiply the numerators."
+                },
+                {
+                    "type": "text",
+                    "text": "2. Multiply the denominators."
+                }
+            ]
+        },
+        {
+            "layout": "CONTENT_WITH_CAPTION",
+            "title": [
+                "Example Problem"
+            ],
+            "subtitle": [
+                "Simplifying the Product"
+            ],
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Let\u2019s multiply 3/4 by 2/3."
+                }
+            ]
+        },
+        {
+            "layout": "PICTURE_WITH_CAPTION",
+            "title": [
+                "Visual Representation"
+            ],
+            "subtitle": [
+                "Understanding multiplication with visuals"
+            ],
+            "picture": [
+                "path_to_image/visual_multiplication_example.png"
+            ]
+        },
+        {
+            "layout": "TITLE_ONLY",
+            "title": [
+                "Practice Time!"
+            ]
+        },
+        {
+            "layout": "BLANK",
+            "title": [
+                "Your Turn"
+            ]
+        },
+        {
+            "layout": "TITLE_AND_CONTENT_SLIDE",
+            "title": [
+                "Summary"
+            ],
+            "content": [
+                {
+                    "type": "text",
+                    "text": "We've learned the steps of multiplying fractions and seen an example. Now it's time to practice on your own!"
+                }
+            ]
+        }
+    ]
+}

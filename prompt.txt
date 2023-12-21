@@ -1,0 +1,22 @@
+I am a {role}. {presentation_context} Can you please provide a slide by slide structure for a {presentation_length} presentation? 
+
+Here are the types of slides and the information that they need:
+- TITLE_SLIDE: 1 title, 1 subtitle
+- TITLE_AND_CONTENT_SLIDE: 1 title, 1 content
+- COMPARISON: 1 title, 2 subtitles, 2 contents
+- TWO_CONTENT: 1 title, 2 contents
+- SECTION_HEADER: 1 title, 1 subtitle
+- TITLE_ONLY: 1 title
+- BLANK: 1 title
+- CONTENT_WITH_CAPTION: 1 title, 1 subtitle, 1 content
+- PICTURE_WITH_CAPTION: 1 title, 1 subtitle, 1 picture
+
+The slideshow should be provided in a JSON format like in the example below. Each slide should be formatted as a dictionary with 
+    {
+        "layout": REQUIRED and chosen from 'TITLE_SLIDE', \"TITLE_AND_CONTENT_SLIDE\", \"COMPARISON\", \"TWO_CONTENT\", \"SECTION_HEADER\", \"TITLE_ONLY\", \"BLANK\", \"CONTENT_WITH_CAPTION\", \"PICTURE_WITH_CAPTION\",
+        "title": REQUIRED in list format", 
+        "subtitle": REQUIRED DEPENDING ON TYPE OF SLIDE in list format with each element being a different subtitle",
+        "picture": REQUIRED PICTURE DEPENDING ON TYPE OF SLIDE in a list of image paths,
+        "content": REQUIRED CONTENT DEPENDING ON TYPE OF SLIDE in a list of dictionaries format with each element being a different content. Each dictionary should have the type which is image or text and the information in a "image" key or "text" key"
+    }
+Here is an example presentation to follow {example_presentation}
