@@ -1,8 +1,12 @@
 from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.dml.color import RGBColor
 from constants import layout_mapping
 import json
 from helper_functions import scale_image
+from presentation_theme import PresentationTheme
 from slide_content import get_metadata_gpt
+from theme import get_theme_gpt
 
 def add_slide(presentation, information):
     """
@@ -49,6 +53,22 @@ def add_slide(presentation, information):
 
 def create_presentation(name, role, presentation_context, presentation_length):
     pres = Presentation()
+
+    #load theme content
+    theme_content = None
+    try:
+        theme_content = json.load(open(f"data.json"))
+    except:
+        answers = get_theme_gpt(role, presentation_context)
+        response = answers["choices"][0]["message"]["content"]
+
+        theme_content = json.loads(response)
+        with open('data.json', 'w') as f:
+            json.dump(response, f)
+        
+    theme = PresentationTheme(theme_content)
+
+    print(theme.get_theme_info())
 
     #load slides content
     slides_content = None
