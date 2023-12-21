@@ -62,7 +62,7 @@
             {
                 "type": "image",
                 "text": "image of a face",
-                "image": "segmentation.png"
+                "image": "images/segmentation.png"
             }
         ],
         "subtitle": ["Subtitle"],
