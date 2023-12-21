@@ -46,21 +46,22 @@ def add_slide(presentation, information):
                 # add image as a shape
                 slide.shapes.add_picture(img_path, placeholder.left, placeholder.top, image_width, image_height)
 
-def main():
-    name = "example_presentation"
-    
-
+def create_presentation(name):
     pres = Presentation()
 
     #load slides content
-    slides_content = json.load(open(f"{name}.json"))
+    slides_content = json.load(open(f"json/{name}.json"))
 
     #add each slide
     for slide in slides_content:
         add_slide(pres, slide)
 
-    pres.save(f'{name}.pptx')
-    print("Presentation created successfully!")
+    pres.save(f'presentation/{name}.pptx')
+    print("Presentation created successfully:", name)
+
+def main():
+    for name in ["example_presentation", "multiplying_fractions"]:
+        create_presentation(name)
 
 if __name__ == "__main__":
     main()

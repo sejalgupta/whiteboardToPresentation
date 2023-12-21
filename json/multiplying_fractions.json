@@ -1,0 +1,87 @@
+[
+    {
+        "title": ["Multiplying Fractions"],
+        "subtitle": ["6th Grade Math Lesson"],
+        "layout": "TITLE_SLIDE"
+    },
+    {
+        "title": ["Introduction"],
+        "content": [
+            {
+                "type": "text",
+                "text": "Overview of today's lesson and learning objectives."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["What are Fractions?"],
+        "content": [
+            {
+                "type": "text",
+                "text": "A brief recap of fractions and their components: numerator and denominator."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Basics of Multiplying Fractions"],
+        "content": [
+            {
+                "type": "text",
+                "text": "Explanation of how to multiply fractions: Multiply the numerators and multiply the denominators."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Example 1"],
+        "content": [
+            {
+                "type": "text",
+                "text": "Step-by-step example of a simple fraction multiplication."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Example 2"],
+        "content": [
+            {
+                "type": "text",
+                "text": "A slightly more complex example involving larger numbers or mixed numbers."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Practice Problem"],
+        "content": [
+            {
+                "type": "text",
+                "text": "An interactive practice problem for students to solve."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Review and Q&A"],
+        "content": [
+            {
+                "type": "text",
+                "text": "Recap of key points and open floor for questions."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    },
+    {
+        "title": ["Conclusion"],
+        "content": [
+            {
+                "type": "text",
+                "text": "Wrap up and preview of the next lesson."
+            }
+        ],
+        "layout": "TITLE_AND_CONTENT_SLIDE"
+    }
+]
