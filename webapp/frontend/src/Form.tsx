@@ -15,10 +15,11 @@ export default function Form() {
             return;
         }
         const formData = new FormData();
-        formData.append("audio", audioBlob);
-        const response = await fetch("http://localhost:3001/api/upload", {
+        formData.append("audioBlob", audioBlob);
+        const response = await fetch("http://localhost:3001/api/uploadAudio", {
             method: "POST",
-            body: formData
+            body: formData,
+            mode: "cors",
         });
         const data = await response.json();
         console.log(data);
