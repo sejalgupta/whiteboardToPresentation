@@ -54,21 +54,21 @@ def add_slide(presentation, information):
 def create_presentation(name, role, presentation_context, presentation_length):
     pres = Presentation()
 
-    #load theme content
-    theme_content = None
-    try:
-        theme_content = json.load(open(f"data.json"))
-    except:
-        answers = get_theme_gpt(role, presentation_context)
-        response = answers["choices"][0]["message"]["content"]
+    # #load theme content
+    # theme_content = None
+    # try:
+    #     theme_content = json.load(open(f"data.json"))
+    # except:
+    #     answers = get_theme_gpt(role, presentation_context)
+    #     response = answers["choices"][0]["message"]["content"]
 
-        theme_content = json.loads(response)
-        with open('data.json', 'w') as f:
-            json.dump(response, f)
+    #     theme_content = json.loads(response)
+    #     with open('data.json', 'w') as f:
+    #         json.dump(response, f)
         
-    theme = PresentationTheme(theme_content)
+    # theme = PresentationTheme(theme_content)
 
-    print(theme.get_theme_info())
+    # print(theme.get_theme_info())
 
     #load slides content
     slides_content = None

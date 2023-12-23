@@ -5,7 +5,10 @@ import json
 
 def get_prompt(role, presentation_context, presentation_length, example_presentation):
     # PROVIDE CONTEXT
-    prompt = f"I am a {role}. {presentation_context} Can you please provide a slide by slide structure for a {presentation_length} presentation?"
+    prompt = f"I am a {role}. Can you please provide a slide by slide structure for a {presentation_length} presentation?"
+
+    # ADD IN AUDIO
+    prompt += f"Here is a summary of the meeting with relevant content we want to incorporate: {presentation_context}"
     
     # CONSTRAINTS FOR EACH TYPE OF SLIDE
     prompt += "Here are the types of slides and the information that they need: - TITLE_SLIDE: 1 title, 1 subtitle \n - TITLE_AND_CONTENT_SLIDE: 1 title, 1 content \n- COMPARISON: 1 title, 2 subtitles, 2 contents \n- TWO_CONTENT: 1 title, 2 contents \n- SECTION_HEADER: 1 title, 1 subtitle \n- TITLE_ONLY: 1 title \n- BLANK: 1 title \n- CONTENT_WITH_CAPTION: 1 title, 1 subtitle, 1 content \n- PICTURE_WITH_CAPTION: 1 title, 1 subtitle, 1 picture"    

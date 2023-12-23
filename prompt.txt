@@ -1,4 +1,9 @@
-I am a {role}. {presentation_context} Can you please provide a slide by slide structure for a {presentation_length} presentation? 
+I am a {role}. Can you please provide a slide by slide structure for a {presentation_length} presentation? 
+
+Here is a summary of the context we want to incorporate: { audio_summary }
+
+Here are the availble pictures with their paths to use in the presentation:
+- { }
 
 Here are the types of slides and the information that they need:
 - TITLE_SLIDE: 1 title, 1 subtitle
