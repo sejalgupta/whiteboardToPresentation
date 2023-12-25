@@ -3,6 +3,7 @@ import AudioRecorder from "./AudioRecorder";
 
 export default function Form() {
     const [audioBlob, setAudioBlob] = useState<Blob>();
+    const [transcript, setTranscript] = useState<string>("");
 
     const setAudioBlobWrapper = (blob: Blob | undefined) => {
         setAudioBlob(blob);
@@ -23,6 +24,7 @@ export default function Form() {
         });
         const data = await response.json();
         console.log(data);
+        setTranscript(data.transcript);
     }
 
     return (
@@ -36,6 +38,7 @@ export default function Form() {
                         <input type="submit" value="Upload" />
                     </>
                 )}
+                { transcript && <p>{transcript}</p> }
                 
             </form>
         </div>

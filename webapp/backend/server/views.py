@@ -15,7 +15,7 @@ def uploadAudio():
     
     # get the audio blob
     audio_file = request.files['audioBlob']
-    print("Received audio file: ", audio_file)
-    transcription = transcribe_audio(audio_file)
+    audio_file.save(audio_file.filename)
+    transcription = transcribe_audio(audio_file.filename, "audio/webm")
     print("Transcribed text: ", transcription)
-    return jsonify({'transcription': transcription})
+    return jsonify({'transcript': transcription})
