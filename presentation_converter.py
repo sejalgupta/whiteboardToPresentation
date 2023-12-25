@@ -8,6 +8,8 @@ from presentation_theme import PresentationTheme
 from slide_content import get_metadata_gpt
 from theme import get_theme_gpt
 
+
+
 def add_slide(presentation, information):
     """
     Add a slide to the presentation with flexible content handling.
