@@ -35,14 +35,16 @@ export default function AudioRecorder( props: { setAudioBlob: setAudioBlobType }
     }
 
     return (
-        <div className="AudioRecorder">
-            <p>AudioRecorder</p>
+        <div id="audio-recorder">
             {recording ? (
-                <button onClick={stopRecording} type="button">Stop Recording</button>
+                <button type="button" className="rounded-md outline outline-red-500 px-3 py-2 text-sm font-semibold text-red-500 shadow-sm hover:bg-red-500 hover:text-white" onClick={stopRecording}>
+                    Stop Recording
+                </button>
             ) : (
-                <button onClick={startRecording} type="button">Start Recording</button>
+                <button type="button" className="rounded-md outline outline-red-500 px-3 py-2 text-sm font-semibold text-red-500 shadow-sm hover:bg-red-500 hover:text-white" onClick={startRecording}>
+                    Start Recording
+                </button>
             )}
-            <br />
         </div>
     );
 }

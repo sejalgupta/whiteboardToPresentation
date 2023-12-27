@@ -4,7 +4,7 @@ import Form from './Form';
 
 function App() {
   return (
-    <div className="App">
+    <div id="App" className='container mx-auto p-4 text-center'>
       <Form />
     </div>
   );
