@@ -16,4 +16,5 @@ def transcribe_audio(filename: str, mimetype: str) -> str:
         url_response = deepgram.listen.prerecorded.v("1").transcribe_file(
             source, options
         )
-        return url_response['results']['channels'][0]['alternatives'][0]['paragraphs']['transcript']
+        transcript =  url_response['results']['channels'][0]['alternatives'][0]['paragraphs']['transcript']
+        return transcript.strip()

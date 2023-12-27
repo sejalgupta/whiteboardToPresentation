@@ -1,7 +1,7 @@
 import json
 import requests
-from presentation_theme import PresentationTheme
-from utils import OPENAI_API_KEY
+from .presentation_theme import PresentationTheme
+from ..config import OPENAI_API_KEY
 
 def theme_prompt(role, presentation_context):
     prompt = f"{role} {presentation_context} Can you provide the best background color, title color, text_color, and font type for my presentation? Please provide the output as only JSON format. Here is an example of an output where colors are represented as a list of RGB values:"

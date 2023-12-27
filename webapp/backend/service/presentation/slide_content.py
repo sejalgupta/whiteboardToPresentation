@@ -1,6 +1,7 @@
-import openai
+# import openai
+import os
 import requests
-from utils import OPENAI_API_KEY
+from ..config import OPENAI_API_KEY
 import json
 
 def get_prompt(role, presentation_context, presentation_length, example_presentation):
@@ -29,7 +30,9 @@ def get_prompt(role, presentation_context, presentation_length, example_presenta
     return prompt
 
 def get_metadata_gpt(role, presentation_context, presentation_length):
-    example_presentation = open("json/example_presentation.json")
+    this_folder = os.path.dirname(os.path.abspath(__file__))
+    content_file = os.path.join(this_folder, "./json/example_presentation.json")
+    example_presentation = open(content_file)
     prompt = get_prompt(role, presentation_context, presentation_length, example_presentation)
 
     answers = None

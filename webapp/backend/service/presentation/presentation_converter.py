@@ -1,12 +1,13 @@
+import os
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
-from constants import layout_mapping
+from .constants import layout_mapping
 import json
-from helper_functions import scale_image
-from presentation_theme import PresentationTheme
-from slide_content import get_metadata_gpt
-from theme import get_theme_gpt
+from .helper_functions import scale_image
+from .presentation_theme import PresentationTheme
+from .slide_content import get_metadata_gpt
+from .theme import get_theme_gpt
 
 
 
@@ -53,7 +54,7 @@ def add_slide(presentation, information):
                 # add image as a shape
                 slide.shapes.add_picture(img_path, placeholder.left, placeholder.top, image_width, image_height)
 
-def create_presentation(name, role, presentation_context, presentation_length):
+def create_presentation(name, role, presentation_context, audio_transcript, presentation_length, pres_save_path):
     pres = Presentation()
 
     # #load theme content
@@ -74,8 +75,10 @@ def create_presentation(name, role, presentation_context, presentation_length):
 
     #load slides content
     slides_content = None
+    this_folder = os.path.dirname(os.path.abspath(__file__))
     try:
-        slides_content = json.load(open(f"json/{name}.json"))
+        content_file = os.path.join(this_folder, f"json/{name}.json")
+        slides_content = json.load(open(content_file))
     except:
         answers = get_metadata_gpt(role, presentation_context, presentation_length)
         response = answers["choices"][0]["message"]["content"]
@@ -91,7 +94,7 @@ def create_presentation(name, role, presentation_context, presentation_length):
         except:
             print("ERROR", slide["layout"])
 
-    pres.save(f'presentation/{name}.pptx')
+    pres.save(pres_save_path)
     print("Presentation created successfully:", name)
 
 def main():

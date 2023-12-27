@@ -1,3 +1,5 @@
 flask
 flask-cors
 deepgram-sdk
+openai
+python_pptx
